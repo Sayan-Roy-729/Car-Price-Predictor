@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <title>Car Price Prediction</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@500&display=swap');
+
+    *{
+        font-family: 'Baloo Da 2', cursive;
+    }
+
+    body{
+        background-color: #ececec;
+    }
+
+    /* .carousel-inner{
+        height: 20%;
+    } */
+
+    .carousel-inner img {
+        width: 100%;
+        height: 80vh;}
+
+</style>
+<body>
+
+    <div id="demo" class="carousel slide" data-ride="carousel">
+        
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80" alt="Los Angeles" width="1100" height="500">
+            <div class="carousel-caption">
+            </div>   
+          </div>
+
+
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1546768292-fb12f6c92568?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" alt="Chicago" width="1100" height="500">
+            <div class="carousel-caption">
+            </div>   
+          </div>
+
+
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" alt="New York" width="1100" height="500">
+            <div class="carousel-caption">
+            </div>   
+          </div>
+
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1471174617910-3e9c04f58ff5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" alt="New York" width="1100" height="500">
+            <div class="carousel-caption">
+            </div>   
+          </div>
+
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1514316703755-dca7d7d9d882?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" alt="New York" width="1100" height="500">
+            <div class="carousel-caption">
+            </div>   
+          </div>
+
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1546614042-7df3c24c9e5d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" alt="New York" width="1100" height="500">
+            <div class="carousel-caption">
+            </div>   
+          </div>
+
+
+        </div>
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div><br><br>
+      
+
+
+
+
+
+
+
+
+    <h1 style="text-align: center;">In our list, there are more than 1850 Cars of 30 different Companies that help you to find right price</h1><br><br>
+
+
+<!-- bootstrap ------>  
+
+
+<div style="width: 50vw; margin: auto;">
+    <form action="/car_companies" method="POST">
+        
+        
+        <div class="form-group">
+          <label for="exampleFormControlSelect2" class="text-center" style="font-size: 20px;">Name of the Company</label>
+          <select class="form-control form-control-lg" name="car_company" id="" required>
+            <option value="" disabled selected hidden >Choose the company from here</option>
+            {% for item in companies %}
+                    <option value={{ item }} style="font-family: 'Baloo Da 2', cursive;">{{ item }}</option>
+            {% endfor %}
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="float: right;">next</button>
+        
+      </form><br><br><br><br>
+</div>
+
+<script>
+    $('.carousel').carousel({
+  interval: 3000
+})
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Other Details</title>
+</head>
+<body>
+    <h1>Name of the car is {{ car_number }}</h1>
+
+
+    <form action="/others" method="POST">
+        <select name="fuel_type" id="" required>
+
+        
+            <option value="" disabled selected hidden >What is your cars fuel type?</option>
+
+            
+            <option value=2 >Petrol</option>
+            <option value=1 >Diesel</option>
+            <option value=0 >CNG</option>
+            <option value=3 >Others</option>
+            
+
+            
+        </select><br>
+
+        <label for="">Year</label><br>
+        <input type="number" name="year">
+
+        <label for="">Total KM drived by car:</label><br>
+        <input type="number" name="km_driven">
+
+        <label for="">Engine Power(in CC):</label><br>
+        <input type="number" name="engine_power">
+
+        <input type="submit" value="next">
+    </form>
+</body>
+</html>
